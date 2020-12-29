@@ -14,6 +14,18 @@ export namespace Components {
     }
     interface CenterViewRevCounter {
     }
+    interface CenterViewRevLimiterGlow {
+        "isActive": boolean;
+    }
+    interface CenterViewRevMarkers {
+        "currentValue": number;
+    }
+    interface CenterViewRevNeedle {
+        "currentValue": number;
+    }
+    interface CenterViewRevShade {
+        "currentValue": number;
+    }
     interface CenterViewSideGauges {
     }
     interface IntroView {
@@ -33,6 +45,8 @@ export namespace Components {
     interface RightViewPagePowertraingraph {
     }
     interface RightViewScrollContainer {
+    }
+    interface WelcomeView {
     }
 }
 declare global {
@@ -59,6 +73,30 @@ declare global {
     var HTMLCenterViewRevCounterElement: {
         prototype: HTMLCenterViewRevCounterElement;
         new (): HTMLCenterViewRevCounterElement;
+    };
+    interface HTMLCenterViewRevLimiterGlowElement extends Components.CenterViewRevLimiterGlow, HTMLStencilElement {
+    }
+    var HTMLCenterViewRevLimiterGlowElement: {
+        prototype: HTMLCenterViewRevLimiterGlowElement;
+        new (): HTMLCenterViewRevLimiterGlowElement;
+    };
+    interface HTMLCenterViewRevMarkersElement extends Components.CenterViewRevMarkers, HTMLStencilElement {
+    }
+    var HTMLCenterViewRevMarkersElement: {
+        prototype: HTMLCenterViewRevMarkersElement;
+        new (): HTMLCenterViewRevMarkersElement;
+    };
+    interface HTMLCenterViewRevNeedleElement extends Components.CenterViewRevNeedle, HTMLStencilElement {
+    }
+    var HTMLCenterViewRevNeedleElement: {
+        prototype: HTMLCenterViewRevNeedleElement;
+        new (): HTMLCenterViewRevNeedleElement;
+    };
+    interface HTMLCenterViewRevShadeElement extends Components.CenterViewRevShade, HTMLStencilElement {
+    }
+    var HTMLCenterViewRevShadeElement: {
+        prototype: HTMLCenterViewRevShadeElement;
+        new (): HTMLCenterViewRevShadeElement;
     };
     interface HTMLCenterViewSideGaugesElement extends Components.CenterViewSideGauges, HTMLStencilElement {
     }
@@ -120,11 +158,21 @@ declare global {
         prototype: HTMLRightViewScrollContainerElement;
         new (): HTMLRightViewScrollContainerElement;
     };
+    interface HTMLWelcomeViewElement extends Components.WelcomeView, HTMLStencilElement {
+    }
+    var HTMLWelcomeViewElement: {
+        prototype: HTMLWelcomeViewElement;
+        new (): HTMLWelcomeViewElement;
+    };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "center-view": HTMLCenterViewElement;
         "center-view-inner-content": HTMLCenterViewInnerContentElement;
         "center-view-rev-counter": HTMLCenterViewRevCounterElement;
+        "center-view-rev-limiter-glow": HTMLCenterViewRevLimiterGlowElement;
+        "center-view-rev-markers": HTMLCenterViewRevMarkersElement;
+        "center-view-rev-needle": HTMLCenterViewRevNeedleElement;
+        "center-view-rev-shade": HTMLCenterViewRevShadeElement;
         "center-view-side-gauges": HTMLCenterViewSideGaugesElement;
         "intro-view": HTMLIntroViewElement;
         "left-view-info": HTMLLeftViewInfoElement;
@@ -135,6 +183,7 @@ declare global {
         "right-view-page-diagrams": HTMLRightViewPageDiagramsElement;
         "right-view-page-powertraingraph": HTMLRightViewPagePowertraingraphElement;
         "right-view-scroll-container": HTMLRightViewScrollContainerElement;
+        "welcome-view": HTMLWelcomeViewElement;
     }
 }
 declare namespace LocalJSX {
@@ -145,6 +194,18 @@ declare namespace LocalJSX {
     interface CenterViewInnerContent {
     }
     interface CenterViewRevCounter {
+    }
+    interface CenterViewRevLimiterGlow {
+        "isActive"?: boolean;
+    }
+    interface CenterViewRevMarkers {
+        "currentValue"?: number;
+    }
+    interface CenterViewRevNeedle {
+        "currentValue"?: number;
+    }
+    interface CenterViewRevShade {
+        "currentValue"?: number;
     }
     interface CenterViewSideGauges {
     }
@@ -166,11 +227,17 @@ declare namespace LocalJSX {
     }
     interface RightViewScrollContainer {
     }
+    interface WelcomeView {
+    }
     interface IntrinsicElements {
         "app-root": AppRoot;
         "center-view": CenterView;
         "center-view-inner-content": CenterViewInnerContent;
         "center-view-rev-counter": CenterViewRevCounter;
+        "center-view-rev-limiter-glow": CenterViewRevLimiterGlow;
+        "center-view-rev-markers": CenterViewRevMarkers;
+        "center-view-rev-needle": CenterViewRevNeedle;
+        "center-view-rev-shade": CenterViewRevShade;
         "center-view-side-gauges": CenterViewSideGauges;
         "intro-view": IntroView;
         "left-view-info": LeftViewInfo;
@@ -181,6 +248,7 @@ declare namespace LocalJSX {
         "right-view-page-diagrams": RightViewPageDiagrams;
         "right-view-page-powertraingraph": RightViewPagePowertraingraph;
         "right-view-scroll-container": RightViewScrollContainer;
+        "welcome-view": WelcomeView;
     }
 }
 export { LocalJSX as JSX };
@@ -191,6 +259,10 @@ declare module "@stencil/core" {
             "center-view": LocalJSX.CenterView & JSXBase.HTMLAttributes<HTMLCenterViewElement>;
             "center-view-inner-content": LocalJSX.CenterViewInnerContent & JSXBase.HTMLAttributes<HTMLCenterViewInnerContentElement>;
             "center-view-rev-counter": LocalJSX.CenterViewRevCounter & JSXBase.HTMLAttributes<HTMLCenterViewRevCounterElement>;
+            "center-view-rev-limiter-glow": LocalJSX.CenterViewRevLimiterGlow & JSXBase.HTMLAttributes<HTMLCenterViewRevLimiterGlowElement>;
+            "center-view-rev-markers": LocalJSX.CenterViewRevMarkers & JSXBase.HTMLAttributes<HTMLCenterViewRevMarkersElement>;
+            "center-view-rev-needle": LocalJSX.CenterViewRevNeedle & JSXBase.HTMLAttributes<HTMLCenterViewRevNeedleElement>;
+            "center-view-rev-shade": LocalJSX.CenterViewRevShade & JSXBase.HTMLAttributes<HTMLCenterViewRevShadeElement>;
             "center-view-side-gauges": LocalJSX.CenterViewSideGauges & JSXBase.HTMLAttributes<HTMLCenterViewSideGaugesElement>;
             "intro-view": LocalJSX.IntroView & JSXBase.HTMLAttributes<HTMLIntroViewElement>;
             "left-view-info": LocalJSX.LeftViewInfo & JSXBase.HTMLAttributes<HTMLLeftViewInfoElement>;
@@ -201,6 +273,7 @@ declare module "@stencil/core" {
             "right-view-page-diagrams": LocalJSX.RightViewPageDiagrams & JSXBase.HTMLAttributes<HTMLRightViewPageDiagramsElement>;
             "right-view-page-powertraingraph": LocalJSX.RightViewPagePowertraingraph & JSXBase.HTMLAttributes<HTMLRightViewPagePowertraingraphElement>;
             "right-view-scroll-container": LocalJSX.RightViewScrollContainer & JSXBase.HTMLAttributes<HTMLRightViewScrollContainerElement>;
+            "welcome-view": LocalJSX.WelcomeView & JSXBase.HTMLAttributes<HTMLWelcomeViewElement>;
         }
     }
 }

@@ -14,6 +14,7 @@ export class MainView {
         <left-view-info></left-view-info>
         <right-view-scroll-container></right-view-scroll-container>
         <main-status-symbols-layer></main-status-symbols-layer>
+        <welcome-view></welcome-view>
       </Host>
     );
   }

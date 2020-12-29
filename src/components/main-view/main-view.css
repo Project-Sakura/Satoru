@@ -10,6 +10,7 @@
   right: 0px;
   top: 0px;
   bottom: 0px;
+  pointer-events: none;
 }
 
 center-view {
@@ -26,4 +27,9 @@ right-view-scroll-container {
 
 main-status-symbols-layer {
   z-index: 3;
+}
+
+welcome-view {
+  z-index: 4;
+  opacity: 0;
 }

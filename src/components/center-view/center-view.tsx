@@ -10,7 +10,11 @@ export class CenterView {
   render() {
     return (
       <Host>
-        <slot></slot>
+        <center-view-rev-counter></center-view-rev-counter>
+        <img id="center-view-rings" src="../assets/images/ring_assembly.png" />
+        <center-view-side-gauges></center-view-side-gauges>
+        <center-view-inner-content></center-view-inner-content>
+        <intro-view></intro-view>
       </Host>
     );
   }
