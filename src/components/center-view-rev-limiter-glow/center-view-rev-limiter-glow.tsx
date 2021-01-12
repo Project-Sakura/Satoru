@@ -35,7 +35,6 @@ export class CenterViewRevLimiterGlow {
   }
 
   draw(context) {
-    console.log("Draw limiter flash");
 
     if (context.activeImageNumber == 0 && context.isActive == false) {
       return;
@@ -43,7 +42,6 @@ export class CenterViewRevLimiterGlow {
 
     if (this.thisElement.shadowRoot.getElementById(context.getCorrelatingImageId(this.activeImageNumber)) != null) {
       this.thisElement.shadowRoot.getElementById(context.getCorrelatingImageId(this.activeImageNumber)).style.opacity = "0.0";
-      console.log("Invalidate old image");
     }
 
     if (context.activeImageNumber < (this.imageCount - 1)) {
@@ -54,7 +52,6 @@ export class CenterViewRevLimiterGlow {
 
     if (this.thisElement.shadowRoot.getElementById(context.getCorrelatingImageId(this.activeImageNumber)) != null) {
       this.thisElement.shadowRoot.getElementById(context.getCorrelatingImageId(this.activeImageNumber)).style.opacity = "1.0";
-      console.log("Drawing new image");
     }
 
 

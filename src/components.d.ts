@@ -9,10 +9,48 @@ export namespace Components {
     interface AppRoot {
     }
     interface CenterView {
+        "coolantTemp": string;
+        "fuelLevel": string;
+        "gearNumber": string;
+        "gearboxMode": string;
+        "launchGlow": boolean;
+        "launchStage": number;
+        "limiterGlow": boolean;
+        "limiterRpm": string;
+        "oilPressure": string;
+        "oilTemp": string;
+        "playingIntro": boolean;
+        "powertrainMode": string;
+        "rpm": string;
+        "shiftLightState": string;
+        "speed": string;
+        "tractionMode": string;
+        "vtecActive": boolean;
+    }
+    interface CenterViewGearboxState {
+        "gearNumber": string;
+        "gearboxMode": string;
     }
     interface CenterViewInnerContent {
+        "gearNumber": string;
+        "gearboxMode": string;
+        "launchStage": number;
+        "powertrainMode": string;
+        "shiftLightState": string;
+        "speed": string;
+        "tractionMode": string;
+        "vtecActive": boolean;
     }
     interface CenterViewRevCounter {
+        "launchGlow": boolean;
+        "launchStage": number;
+        "limiterGlow": boolean;
+        "limiterRpm": string;
+        "rpm": string;
+    }
+    interface CenterViewRevLaunchGlow {
+        "isActive": boolean;
+        "stage": number;
     }
     interface CenterViewRevLimiterGlow {
         "isActive": boolean;
@@ -26,9 +64,19 @@ export namespace Components {
     interface CenterViewRevShade {
         "currentValue": number;
     }
+    interface CenterViewShiftLights {
+        "launchStage": number;
+        "lightState": number;
+        "vtecActive": boolean;
+    }
     interface CenterViewSideGauges {
+        "coolantTemp": string;
+        "fuelLevel": string;
+        "oilPressure": string;
+        "oilTemp": string;
     }
     interface IntroView {
+        "playingIntro": boolean;
     }
     interface LeftViewInfo {
     }
@@ -62,6 +110,12 @@ declare global {
         prototype: HTMLCenterViewElement;
         new (): HTMLCenterViewElement;
     };
+    interface HTMLCenterViewGearboxStateElement extends Components.CenterViewGearboxState, HTMLStencilElement {
+    }
+    var HTMLCenterViewGearboxStateElement: {
+        prototype: HTMLCenterViewGearboxStateElement;
+        new (): HTMLCenterViewGearboxStateElement;
+    };
     interface HTMLCenterViewInnerContentElement extends Components.CenterViewInnerContent, HTMLStencilElement {
     }
     var HTMLCenterViewInnerContentElement: {
@@ -73,6 +127,12 @@ declare global {
     var HTMLCenterViewRevCounterElement: {
         prototype: HTMLCenterViewRevCounterElement;
         new (): HTMLCenterViewRevCounterElement;
+    };
+    interface HTMLCenterViewRevLaunchGlowElement extends Components.CenterViewRevLaunchGlow, HTMLStencilElement {
+    }
+    var HTMLCenterViewRevLaunchGlowElement: {
+        prototype: HTMLCenterViewRevLaunchGlowElement;
+        new (): HTMLCenterViewRevLaunchGlowElement;
     };
     interface HTMLCenterViewRevLimiterGlowElement extends Components.CenterViewRevLimiterGlow, HTMLStencilElement {
     }
@@ -97,6 +157,12 @@ declare global {
     var HTMLCenterViewRevShadeElement: {
         prototype: HTMLCenterViewRevShadeElement;
         new (): HTMLCenterViewRevShadeElement;
+    };
+    interface HTMLCenterViewShiftLightsElement extends Components.CenterViewShiftLights, HTMLStencilElement {
+    }
+    var HTMLCenterViewShiftLightsElement: {
+        prototype: HTMLCenterViewShiftLightsElement;
+        new (): HTMLCenterViewShiftLightsElement;
     };
     interface HTMLCenterViewSideGaugesElement extends Components.CenterViewSideGauges, HTMLStencilElement {
     }
@@ -167,12 +233,15 @@ declare global {
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "center-view": HTMLCenterViewElement;
+        "center-view-gearbox-state": HTMLCenterViewGearboxStateElement;
         "center-view-inner-content": HTMLCenterViewInnerContentElement;
         "center-view-rev-counter": HTMLCenterViewRevCounterElement;
+        "center-view-rev-launch-glow": HTMLCenterViewRevLaunchGlowElement;
         "center-view-rev-limiter-glow": HTMLCenterViewRevLimiterGlowElement;
         "center-view-rev-markers": HTMLCenterViewRevMarkersElement;
         "center-view-rev-needle": HTMLCenterViewRevNeedleElement;
         "center-view-rev-shade": HTMLCenterViewRevShadeElement;
+        "center-view-shift-lights": HTMLCenterViewShiftLightsElement;
         "center-view-side-gauges": HTMLCenterViewSideGaugesElement;
         "intro-view": HTMLIntroViewElement;
         "left-view-info": HTMLLeftViewInfoElement;
@@ -190,10 +259,48 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface CenterView {
+        "coolantTemp"?: string;
+        "fuelLevel"?: string;
+        "gearNumber"?: string;
+        "gearboxMode"?: string;
+        "launchGlow"?: boolean;
+        "launchStage"?: number;
+        "limiterGlow"?: boolean;
+        "limiterRpm"?: string;
+        "oilPressure"?: string;
+        "oilTemp"?: string;
+        "playingIntro"?: boolean;
+        "powertrainMode"?: string;
+        "rpm"?: string;
+        "shiftLightState"?: string;
+        "speed"?: string;
+        "tractionMode"?: string;
+        "vtecActive"?: boolean;
+    }
+    interface CenterViewGearboxState {
+        "gearNumber"?: string;
+        "gearboxMode"?: string;
     }
     interface CenterViewInnerContent {
+        "gearNumber"?: string;
+        "gearboxMode"?: string;
+        "launchStage"?: number;
+        "powertrainMode"?: string;
+        "shiftLightState"?: string;
+        "speed"?: string;
+        "tractionMode"?: string;
+        "vtecActive"?: boolean;
     }
     interface CenterViewRevCounter {
+        "launchGlow"?: boolean;
+        "launchStage"?: number;
+        "limiterGlow"?: boolean;
+        "limiterRpm"?: string;
+        "rpm"?: string;
+    }
+    interface CenterViewRevLaunchGlow {
+        "isActive"?: boolean;
+        "stage"?: number;
     }
     interface CenterViewRevLimiterGlow {
         "isActive"?: boolean;
@@ -207,9 +314,19 @@ declare namespace LocalJSX {
     interface CenterViewRevShade {
         "currentValue"?: number;
     }
+    interface CenterViewShiftLights {
+        "launchStage"?: number;
+        "lightState"?: number;
+        "vtecActive"?: boolean;
+    }
     interface CenterViewSideGauges {
+        "coolantTemp"?: string;
+        "fuelLevel"?: string;
+        "oilPressure"?: string;
+        "oilTemp"?: string;
     }
     interface IntroView {
+        "playingIntro"?: boolean;
     }
     interface LeftViewInfo {
     }
@@ -232,12 +349,15 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "app-root": AppRoot;
         "center-view": CenterView;
+        "center-view-gearbox-state": CenterViewGearboxState;
         "center-view-inner-content": CenterViewInnerContent;
         "center-view-rev-counter": CenterViewRevCounter;
+        "center-view-rev-launch-glow": CenterViewRevLaunchGlow;
         "center-view-rev-limiter-glow": CenterViewRevLimiterGlow;
         "center-view-rev-markers": CenterViewRevMarkers;
         "center-view-rev-needle": CenterViewRevNeedle;
         "center-view-rev-shade": CenterViewRevShade;
+        "center-view-shift-lights": CenterViewShiftLights;
         "center-view-side-gauges": CenterViewSideGauges;
         "intro-view": IntroView;
         "left-view-info": LeftViewInfo;
@@ -257,12 +377,15 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "center-view": LocalJSX.CenterView & JSXBase.HTMLAttributes<HTMLCenterViewElement>;
+            "center-view-gearbox-state": LocalJSX.CenterViewGearboxState & JSXBase.HTMLAttributes<HTMLCenterViewGearboxStateElement>;
             "center-view-inner-content": LocalJSX.CenterViewInnerContent & JSXBase.HTMLAttributes<HTMLCenterViewInnerContentElement>;
             "center-view-rev-counter": LocalJSX.CenterViewRevCounter & JSXBase.HTMLAttributes<HTMLCenterViewRevCounterElement>;
+            "center-view-rev-launch-glow": LocalJSX.CenterViewRevLaunchGlow & JSXBase.HTMLAttributes<HTMLCenterViewRevLaunchGlowElement>;
             "center-view-rev-limiter-glow": LocalJSX.CenterViewRevLimiterGlow & JSXBase.HTMLAttributes<HTMLCenterViewRevLimiterGlowElement>;
             "center-view-rev-markers": LocalJSX.CenterViewRevMarkers & JSXBase.HTMLAttributes<HTMLCenterViewRevMarkersElement>;
             "center-view-rev-needle": LocalJSX.CenterViewRevNeedle & JSXBase.HTMLAttributes<HTMLCenterViewRevNeedleElement>;
             "center-view-rev-shade": LocalJSX.CenterViewRevShade & JSXBase.HTMLAttributes<HTMLCenterViewRevShadeElement>;
+            "center-view-shift-lights": LocalJSX.CenterViewShiftLights & JSXBase.HTMLAttributes<HTMLCenterViewShiftLightsElement>;
             "center-view-side-gauges": LocalJSX.CenterViewSideGauges & JSXBase.HTMLAttributes<HTMLCenterViewSideGaugesElement>;
             "intro-view": LocalJSX.IntroView & JSXBase.HTMLAttributes<HTMLIntroViewElement>;
             "left-view-info": LocalJSX.LeftViewInfo & JSXBase.HTMLAttributes<HTMLLeftViewInfoElement>;

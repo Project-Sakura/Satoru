@@ -1,3 +1,133 @@
 :host {
   display: block;
+  width: 824px;
+  height: 635px;
+  position: absolute;
+}
+
+div {
+  display: block;
+  width: 180px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  background-repeat: no-repeat no-repeat;
+  background-position: bottom;
+  z-index: 1;
+}
+
+#oil_temp {
+  background-image: url("../assets/images/side_gauge_top_left.png");
+  bottom: 376px;
+  left: 0px;
+  height: 20px;
+}
+
+#coolant_temp {
+  background-image: url("../assets/images/side_gauge_bottom_left.png");
+  bottom: 53px;
+  left: 0px;
+}
+
+#oil_pressure {
+  background-image: url("../assets/images/side_gauge_bottom_right.png");
+  bottom: 53px;
+  right: 0px;
+}
+
+#fuel_level {
+  background-image: url("../assets/images/side_gauge_top_right.png");
+  bottom: 376px;
+  right: 0px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  display:block;
+  z-index: 2;
+}
+
+#oil_temp_symbol {
+  top: 50px;
+  left: 30px;
+}
+
+#coolant_temp_symbol {
+  bottom: 50px;
+  left: 30px;
+}
+
+#oil_pressure_symbol {
+  bottom: 50px;
+  right: 30px;
+}
+
+#fuel_level_symbol {
+  top: 50px;
+  right: 30px;
+}
+
+.gauge_unit {
+  font-size: 16px;
+  font-style: italic;
+  color: #ffffff;
+  position: absolute;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+
+#oil_temp_unit {
+top: 72px;
+right: 805px;
+}
+
+#coolant_temp_unit {
+bottom: 46px;
+right: 805px;
+}
+
+#fuel_level_unit {
+top: 72px;
+left: 805px;
+}
+
+#oil_pressure_unit {
+bottom: 46px;
+left: 805px;
+}
+
+.gauge_value {
+  font-size: 22px;
+  font-style: italic;
+  color: #ffffff;
+  position: absolute;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+
+#oil_temp_value {
+top: 46px;
+right: 803px;
+}
+
+#coolant_temp_value {
+bottom: 64px;
+right: 803px;
+}
+
+#fuel_level_value {
+top: 46px;
+left: 803px;
+}
+
+#oil_pressure_value {
+bottom: 64px;
+left: 803px;
 }

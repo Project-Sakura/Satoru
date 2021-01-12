@@ -2,6 +2,16 @@
   display: block;
 }
 
+intro-view {
+  z-index: 5;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+}
+
 center-view-rev-counter {
   z-index: 1;
   display: block;
@@ -12,7 +22,7 @@ center-view-rev-counter {
 }
 
 #center-view-rings {
-  z-index: 2;
+  z-index: 3;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -24,7 +34,7 @@ center-view-rev-counter {
 }
 
 center-view-side-gauges {
-  z-index: 3;
+  z-index: 2;
   display: block;
   position: absolute;
   top: 50%;
@@ -40,4 +50,3 @@ center-view-inner-content {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
